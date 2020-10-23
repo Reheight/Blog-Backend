@@ -1,0 +1,26 @@
+GET http://localhost:3627/members/1
+
+###
+
+POST http://localhost:3627/authentication
+Content-Type: application/json
+
+{
+    "username": "Reheight",
+    "firstName": "Dustin",
+    "lastName": "Palmatier",
+    "email": "dustinpalmatier@icloud.com",
+    "password": "**************",
+    "birthdate": "2003/04/10"
+}
+
+###
+
+POST http://localhost:3627/authentication/login
+Content-Type: application/json
+
+{
+    "username": "Reheight",
+    "email": "dustinpalmatier@icloud.com",
+    "password": "**************"
+}
