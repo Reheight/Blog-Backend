@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Fri Oct 23 2020 09:44:44 GMT-0400 (Eastern Daylight Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/autogit.json
+* test
+
+
+Deleted files:
+
+
+Renamed files:
