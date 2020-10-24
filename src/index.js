@@ -1,8 +1,8 @@
 //#region We will import the modules we need
-const express = require('express');
-const cors = require('cors');
-const { connect } = require('./Mongo/');
-const bodyParser = require('body-parser');
+const express = require("express");
+const cors = require("cors");
+const { connect } = require("./Mongo/");
+const bodyParser = require("body-parser");
 require("dotenv").config();
 //#endregion
 
@@ -15,9 +15,9 @@ const PORT = process.env.PORT;
 //#endregion
 
 //#region We will instantiate MongoDB and connect to the database
-connect(( error ) => {
-    if (error) return console.log(error);
-})
+connect((error) => {
+  if (error) return console.log(error);
+});
 //#endregion
 
 //#region We will configure express
@@ -27,19 +27,21 @@ app.use(bodyParser.urlencoded({ extended: true })); // Fixes for understanding p
 //#endregion
 
 //#region We will define the routes for our API
-const { AuthenticationRouter } = require('./routes');
+const { AuthenticationRouter } = require("./routes");
+const { BlogsRouter } = require("./routes");
 //#endregion
 
 //#region We will specify the routes for Express to make use of
-app.use('/authentication', AuthenticationRouter);
+app.use("/authentication", AuthenticationRouter);
+app.use("/blogs", BlogsRouter);
 //#endregion
 
 //#region We will begin to broadcast the service over the port we defined in the .env
-app.listen(PORT, function() {
-    console.log(
-        `
+app.listen(PORT, function () {
+  console.log(
+    `
         Blog API is running on Port: ${PORT}
         `
-        )
+  );
 });
 //#endregion

@@ -1,5 +1,7 @@
-const AuthenticationRouter = require('./Authentication');
+const AuthenticationRouter = require("./Authentication");
+const BlogsRouter = require("./Blogs");
 
 module.exports = {
-    AuthenticationRouter
-}
+  AuthenticationRouter,
+  BlogsRouter,
+};
